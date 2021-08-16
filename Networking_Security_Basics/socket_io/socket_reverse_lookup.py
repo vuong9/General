@@ -1,0 +1,11 @@
+import socket
+
+try:
+    result = socket.gethostbyaddr("8.8.8.8")
+    print("The host name is:")
+    print(" " + result[0])
+    print("\nAddress:")
+    for item in result[2]:
+        print(" " + item)
+except socket.herror as e:
+    print("error for resolving ip address:", e)
